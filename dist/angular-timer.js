@@ -1,5 +1,5 @@
 /**
- * angular-timer - v1.3.3 - 2015-05-28 9:05 AM
+ * angular-timer - v1.3.3 - 2015-11-30 6:23 PM
  * https://github.com/siddii/angular-timer
  *
  * Copyright (c) 2015 Siddique Hameed
@@ -305,7 +305,7 @@ var timerModule = angular.module('timer', [])
             $scope.$digest();
           }, $scope.interval - adjustment);
 
-          $scope.$emit('timer-tick', {timeoutId: $scope.timeoutId, millis: $scope.millis});
+          $scope.$emit('timer-tick', {timeoutId: $scope.timeoutId, millis: $scope.millis, timerElement: $element[0]});
 
           if ($scope.countdown > 0) {
             $scope.countdown--;
